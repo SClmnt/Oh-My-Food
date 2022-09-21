@@ -1,0 +1,22 @@
+%shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+%radius{
+    border-radius: 5vw;
+}
+
+%cornertop{
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+}
+
+%cornerbot{
+    border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+}
+
+%heartpos{
+    top: 0%;
+    left: 0%;
+}

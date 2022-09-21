@@ -1,0 +1,38 @@
+.header {
+    @include column-centered;
+    margin: 0vh auto;
+    padding: 5vw 0vw;
+    >img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 8vw;
+        margin: 0 auto;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vw 10vw;
+    font-size: 4vw;
+    >div{
+        display: flex;
+        flex-direction: column;
+    }
+    &__txt{
+        color: $negative;
+        padding: 1vw 0vw;
+        &--logo{
+            @extend .footer__txt;
+            font-family: 'Shrikhand';
+            
+        }
+        &--bold{
+            @extend .footer__txt;
+            font-weight: bold;
+        }
+    }
+}

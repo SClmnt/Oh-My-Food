@@ -1,18 +1,290 @@
-a {
-  text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Shrikhand&display=swap");
+.card, .btn, .btn--line, .btn--line--purple {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.btn {
+.card .fig, .card, .btn, .btn--line, .btn--line--purple {
+  border-radius: 5vw;
+}
+
+.card .fig__img {
+  border-top-left-radius: 5vw;
+  border-top-right-radius: 5vw;
+}
+
+.card .caption {
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+}
+
+.caption__heart--empty, .caption__heart--full {
+  top: 0%;
+  left: 0%;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn, .btn--line, .btn--line--purple {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  padding: 2vw 0vw;
+  margin: 3.5vw auto;
 }
-.btn--line {
+.btn__span {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.btn--line, .btn--line--purple {
+  background-color: #f6f6f6;
+  align-items: center;
+  justify-content: flex-start;
+}
+.btn--line--purple {
+  background-color: #f2eafb;
+}
+.btn__nmb {
+  display: flex;
+  color: white;
+  background-color: #9356DC;
+  width: 8vw;
+  height: 8vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8vw;
+  margin: 2vw;
+  margin-left: -3vw;
+}
+.btn__icon {
+  color: #353535;
+  opacity: 0.7;
+}
+.btn__icon--purple {
+  color: #9356DC;
 }
 .btn__txt--bold {
-  color: red;
+  font-weight: bold;
+  margin: 2vw;
+}
+
+.caption__heart {
+  position: relative;
+  padding: 3vw;
+  border: none;
+  background-color: white;
+}
+.caption__heart--full {
+  opacity: 0;
+  position: absolute;
+  font-size: 5vw;
+  z-index: 2;
+  color: #9356DC;
+}
+.caption__heart--full:hover {
+  opacity: 1;
+}
+.caption__heart--empty {
+  position: absolute;
+  font-size: 5vw;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0vw auto;
+  padding: 4vw 5vw;
+  margin: 0vh auto;
+  padding: 5vw 0vw;
+}
+.header__form {
+  padding: 0vw 0vw;
+}
+.header__title {
+  align-self: flex-start;
+  margin: 1vw 0vw;
+}
+.header__title--center {
+  font-size: 7vw;
+  width: 85%;
+  text-align: center;
+}
+.header__block {
+  width: 89%;
+  margin: 0vw 0vw;
+  padding: 0vh 0vw;
+}
+.header__btn--purple {
+  padding: 5vw;
+  border-radius: 10vw;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border: none;
+  color: white;
+  margin: 6vw 0vw;
+  font-size: 4vw;
+}
+.header__txt {
+  margin: 1vw 0vw;
+  width: 110%;
+  text-align: center;
+}
+.header > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 8vw;
+  margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vw 10vw;
+  font-size: 4vw;
+}
+.footer > div {
+  display: flex;
+  flex-direction: column;
+}
+.footer__txt, .footer__txt--bold, .footer__txt--logo {
+  color: white;
+  padding: 1vw 0vw;
+}
+.footer__txt--logo {
+  font-family: "Shrikhand";
+}
+.footer__txt--bold {
+  font-weight: bold;
+}
+
+.container, .container--lightgray, .container__block, .header__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0vw auto;
+  padding: 4vw 5vw;
+}
+.container__form {
+  padding: 0vw 0vw;
+}
+.container__title {
+  align-self: flex-start;
+  margin: 1vw 0vw;
+}
+.container__title--center {
+  font-size: 7vw;
+  width: 85%;
+  text-align: center;
+}
+.container__block {
+  width: 89%;
+  margin: 0vw 0vw;
+  padding: 0vh 0vw;
+}
+.container__btn--purple {
+  padding: 5vw;
+  border-radius: 10vw;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border: none;
+  color: white;
+  margin: 6vw 0vw;
+  font-size: 4vw;
+}
+.container__txt {
+  margin: 1vw 0vw;
+  width: 110%;
+  text-align: center;
+}
+.container--lightgray {
+  background-color: #f6f6f6;
+}
+
+.card {
+  width: 100%;
+  margin: 3vw auto;
+  overflow: hidden;
+  display: flex;
+}
+.card .fig {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card .fig__img {
+  display: block;
+  width: 100%;
+  max-height: 30vw;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+}
+.card .caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+  background-color: white;
+}
+.card .caption__txt, .card .caption__txt--bold {
+  margin: 0vw 0vw;
+}
+.card .caption__txt--bold {
+  font-weight: bold;
+}
+.card .caption__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  background-color: #353535;
+}
+
+form {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0vw 0vw;
+  padding: 3vw 5vw;
+  color: #383838;
+}
+form > i {
+  padding: 0 1vw;
+}
+form > input {
+  background-color: #eaeaea;
+  border: none;
+  font-weight: bold;
+  color: #383838;
+  font-size: 4vw;
+  width: 40vw;
 }
 
 /*# sourceMappingURL=style.css.map */

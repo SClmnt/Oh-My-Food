@@ -1,0 +1,22 @@
+form{
+    background-color: $dark-gray;
+    display: flex;
+    justify-content: center;
+    
+    height: 100%;
+    margin: 0vw 0vw;
+    padding: 3vw 5vw;
+    color: darken($dark-gray, 70%);
+    >i{
+        
+        padding: 0 1vw;
+    }
+    >input{
+        background-color: $dark-gray;
+        border: none;
+        font-weight: bold;
+        color: darken($dark-gray, 70%);
+        font-size: 4vw;
+        width: 40vw;
+    }
+}

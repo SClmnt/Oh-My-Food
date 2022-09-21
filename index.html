@@ -9,89 +9,103 @@
 	</head>
 
 	<body>
-		<header class="section__header--acceuil">
-			<img src="images/logo/ohmyfood@2x.svg">
+		<header class="header">
+			<img src="images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise oh my food">
 		</header>
 		<main>
-			<section class="container">
+			<section class="container__form">
 				<form>
 					<i class="fa-solid fa-location-dot"></i>
-					<input id="champ" type="text" placeholder="Paris, Belleville">
+					<input id="champ" type="text" value="Paris, Belleville">
 				</form>
 			</section>
-			<section class="container--lightgrey">
-				<h1 class="container__title--center">Réservez le menu qui vous convient</h1>
-				<p class="container__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-				<button class="container__txt--purple_round">Explorer nos restaurants</button>
+			<section class="container--lightgray">
+				<div class="container__block">
+					<h1 class="container__title--center">Réservez le menu qui vous convient</h1>
+					<p class="container__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+					<a href="#liste" class="container__btn--purple">Explorer nos restaurants</a>
+				</div>
 			</section>
 			<section class="container">
 				<h2 class="container__title">Fonctionnement</h2>
 				<div class="container__block">					
-						<span class="btn--line">
+						<div class="btn--line">
 							<p class="btn__nmb">1</p>
 							<i class="btn__icon fa-solid fa-mobile-screen"></i>
 							<p class="btn__txt--bold">Choisissez un restaurant</p>
-						</span>					
-						<span class="btn--line" >
+						</div>					
+						<div class="btn--line" >
 							<p class="btn__nmb">2</p>
 							<i class="btn__icon fa-solid fa-list"></i>
 							<p class="btn__txt--bold">Composez votre menu</p>					
-						</span>
-						<span class="btn--line">
+						</div>
+						<div class="btn--line--purple">
 							<p class="btn__nmb">3</p>
-							<i class="btn__icon fa-solid fa-store"></i>
+							<i class="btn__icon--purple fa-solid fa-store"></i>
 							<p class="btn__txt--bold">Dégustez au restaurant</p>
-						</span>
+						</div>
 				</div>
 			</section>
-			<section class="container--lightgrey">				
-				<h2 class="container__title">Restaurants</h2>
+			<section class="container--lightgray">				
+				<h2 class="container__title" id="liste">Restaurants</h2>
 				<div class="container__block">
-					<a href="#">
+					<a class="card" href="#">
 						<figure class="fig">
-							<img class="fig__img" src="images/restaurants/La palette du goût.jpg" alt="Photo d'un plat du restaurant La palette du goût">
-							<figcaption class="btn">
-								<span class="btn__span">
-									<p class="btn__txt--bold">La palette du goût</p>
-									<p class="btn__txt">Ménilmontant</p>
-								</span>
-								<button class="btn__heart fa-solid fa-heart"></button>					
+							<img class="fig__img" src="images/restaurants/La_palette_du_goût.jpg" alt="Photo d'un plat du restaurant La palette du goût">
+							<figcaption class="caption">
+								<div class="caption__div">
+									<p class="caption__txt--bold">La palette du goût</p>
+									<p class="caption__txt">Ménilmontant</p>
+								</div>
+								<div class="caption__heart">
+									<i class="caption__heart--full fa-solid fa-heart"></i> 
+									<i class="caption__heart--empty fa-regular fa-heart"></i>
+								</div>						
 							</figcaption>
 						</figure>
 					</a>
-					<a href="#">
+					<a class="card" href="#">
 						<figure class="fig">
-							<img class="fig__img" src="images/restaurants/La note enchantée.jpg" alt="Photo d'un plat du restaurant La note enchantée">
-							<figcaption class="btn">
-								<span class="btn__span">
-									<p class="btn__txt--bold">La note enchantée</p>
-									<p class="btn__txt">Charonne</p>
-								</span>	
-								<button class="btn__heart fa-solid fa-heart"></button>								
+							<img class="fig__img" src="images/restaurants/La_note_enchantée.jpg" alt="Photo d'un plat du restaurant La note enchantée">
+							<figcaption class="caption">
+								<div class="caption__div">
+									<p class="caption__txt--bold">La note enchantée</p>
+									<p class="caption__txt">Charonne</p>
+								</div>	
+								<div class="caption__heart">
+									<i class="caption__heart--full fa-solid fa-heart"></i> 
+									<i class="caption__heart--empty fa-regular fa-heart"></i>
+								</div>								
 							</figcaption>
 						</figure>
 					</a>	
-					<a href="#">
+					<a class="card" href="#">
 						<figure class="fig">
-							<img class="fig__img" src="images/restaurants/A la française.jpg" alt="Photo d'un plat du restaurant A la française">
-							<figcaption class="btn">
-								<span class="btn__span">
-									<p class="btn__txt--bold">A la française</p>
-									<p class="btn__txt">Cité-Rouge</p>
-								</span>
-								<button class="btn__heart fa-solid fa-heart"></button>								
+							<img class="fig__img" src="images/restaurants/A_la_française.jpg" alt="Photo d'un plat du restaurant A la française">
+							<figcaption class="caption">
+								<div class="caption__div">
+									<p class="caption__txt--bold">A la française</p>
+									<p class="caption__txt">Cité-Rouge</p>
+								</div>
+								<div class="caption__heart">
+									<i class="caption__heart--full fa-solid fa-heart"></i> 
+									<i class="caption__heart--empty fa-regular fa-heart"></i>
+								</div>									
 							</figcaption>
 						</figure>
 					</a>
-					<a href="#">
+					<a class="card" href="#">
 						<figure class="fig">
-							<img class="fig__img" src="images/restaurants/Le délice des sens.jpg" alt="Photo d'un plat du restaurant Le délice des sens">
-							<figcaption class="btn">
-								<span class="btn__span">
-									<p class="btn__txt--bold">Le délice des sens</p>
-									<p class="btn__txt">Folie-Méricourt</p>
-								</span>	
-								<button class="btn__heart fa-solid fa-heart"></button>								
+							<img class="fig__img" src="images/restaurants/Le_délice_des_sens.jpg" alt="Photo d'un plat du restaurant Le délice des sens">
+							<figcaption class="caption">
+								<div class="caption__div">
+									<p class="caption__txt--bold">Le délice des sens</p>
+									<p class="caption__txt">Folie-Méricourt</p>
+								</div>
+								<div class="caption__heart">
+									<i class="caption__heart--full fa-solid fa-heart"></i> 
+									<i class="caption__heart--empty fa-regular fa-heart"></i>
+								</div>								
 							</figcaption>
 						</figure>
 					</a>
@@ -99,7 +113,7 @@
 			</section>
 		</main>
 		<footer class="footer">			
-			<a class="footer__logo" href="index.html"><img src="images/logo/ohmyfood@2x.svg"></a>
+			<a class="footer__txt--logo" href="index.html">ohmyfood</a>
 			<div>
 				<a class="footer__txt--bold" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
 				<a class="footer__txt--bold" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>

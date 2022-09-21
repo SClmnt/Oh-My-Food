@@ -1,0 +1,104 @@
+@mixin column-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin: 0vw auto;
+    padding: 4vw 5vw;
+    
+    &__form{
+        padding: 0vw 0vw;
+    }
+
+    &__title{
+        align-self: flex-start;
+        margin: 1vw 0vw;
+        &--center{
+            font-size: 7vw;
+            width: 85%;
+            text-align: center;
+        }
+    }
+    &__block{
+        @extend .container;
+        width: 89%;
+        margin: 0vw 0vw;
+        padding: 0vh 0vw;
+    }
+    &__btn--purple{
+        padding: 5vw;
+        border-radius: 10vw;
+        background: $radiant;
+        border: none;
+        color: $negative;
+        margin: 6vw 0vw;
+        font-size: 4vw;
+    }
+    &__txt{
+        margin: 1vw 0vw;
+        width: 110%;
+        text-align: center;
+    }
+}
+
+@mixin btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    @extend %radius;
+    padding: 2vw 0vw;
+    margin: 3.5vw auto;
+    &__span{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &--line{
+        @extend .btn;
+        background-color: $light-gray;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &--line--purple{
+        @extend .btn--line;
+        background-color: lighten($color: $primary-color, $amount: 35%);
+    } 
+    &__nmb{
+        display: flex;
+        color: white;
+        background-color: $primary-color;
+        width: 8vw;
+        height: 8vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8vw;
+        margin: 2vw;
+        margin-left: -3vw;
+        
+    }
+    &__icon{
+        color: $dark-bckground;
+        opacity: 0.7;
+        &--purple{
+            color: $primary-color;
+        }
+    }
+    &__txt--bold{
+        font-weight: bold;
+        margin: 2vw;
+    }
+
+}
+
+@mixin heartp_pos {
+    top: 0%;
+    left: 0%;
+}
+
+@mixin radiant {
+    color: $primary-color;
+    color: linear-gradient(355deg, $primary-color 0%, $secondary-color 100%);
+    
+}

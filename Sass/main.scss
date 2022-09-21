@@ -1,31 +1,16 @@
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
-@import "./base/base";
-@import "./base/typography";
+@import "./Utils/variables";
+@import "./Utils/functions";
+@import "./Utils/mixins";
+@import "./Utils/extensions";
+@import "./Base/base";
+@import "./Base/typography";
 @import "./Composants/buttons";
-@import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+@import "./Layouts/header";
+@import "./Layouts/nav";
+@import "./Layouts/container";
+@import "./Layouts/form";
+@import "./Pages/work";
+@import "./Pages/about";
+@import "./Pages/project";
 
-a {
-    text-decoration: none;
-    
-}
-.btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    &--line{
-        display: flex;
-        flex-direction: row;
-    }
-    &__txt--bold{
-        color: red;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Shrikhand&display=swap');
