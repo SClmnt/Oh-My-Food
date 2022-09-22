@@ -13,7 +13,7 @@
     overflow: hidden;
     @extend %shadow;
     display: flex;
-
+    position: relative;
     .fig{
         display: flex;
         width: 100%;

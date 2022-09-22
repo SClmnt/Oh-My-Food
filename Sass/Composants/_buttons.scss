@@ -15,9 +15,10 @@
             font-size: 5vw;
             z-index: 2;
             @extend %heartpos;
-            color: $primary-color;    
+            color: $radiant;    
             &:hover{
                 opacity: 1;
+                
             }
         }
         &--empty{

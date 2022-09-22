@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Shrikhand&display=swap");
-.card, .btn, .btn--line, .btn--line--purple {
+.card, .container__btn--purple, .header__btn--purple, .btn, .btn--line, .btn--line--purple {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -95,7 +95,7 @@ a {
   position: absolute;
   font-size: 5vw;
   z-index: 2;
-  color: #9356DC;
+  color: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
 }
 .caption__heart--full:hover {
   opacity: 1;
@@ -136,11 +136,16 @@ a {
 .header__btn--purple {
   padding: 5vw;
   border-radius: 10vw;
-  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
   border: none;
   color: white;
   margin: 6vw 0vw;
   font-size: 4vw;
+  transition: filter 500ms, box-shadow 500ms 150ms;
+}
+.header__btn--purple:hover {
+  filter: brightness(110%);
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .header__txt {
   margin: 1vw 0vw;
@@ -206,11 +211,16 @@ a {
 .container__btn--purple {
   padding: 5vw;
   border-radius: 10vw;
-  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
   border: none;
   color: white;
   margin: 6vw 0vw;
   font-size: 4vw;
+  transition: filter 500ms, box-shadow 500ms 150ms;
+}
+.container__btn--purple:hover {
+  filter: brightness(110%);
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .container__txt {
   margin: 1vw 0vw;
@@ -226,6 +236,7 @@ a {
   margin: 3vw auto;
   overflow: hidden;
   display: flex;
+  position: relative;
 }
 .card .fig {
   display: flex;

@@ -34,6 +34,13 @@
         color: $negative;
         margin: 6vw 0vw;
         font-size: 4vw;
+        @extend %shadow;
+        transition: filter 500ms, box-shadow 500ms 150ms;
+        &:hover{
+            filter: brightness(110%);
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
     }
     &__txt{
         margin: 1vw 0vw;
@@ -62,7 +69,7 @@
         justify-content: flex-start;
     }
     &--line--purple{
-        @extend .btn--line;
+        @extend .btn--line;       
         background-color: lighten($color: $primary-color, $amount: 35%);
     } 
     &__nmb{
