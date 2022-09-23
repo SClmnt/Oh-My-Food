@@ -2,7 +2,11 @@
     @include column-centered;
     &--lightgray{
         background-color: $light-gray ;
-        @extend .container
+        @extend .container;
+        @include desktop{
+            background-color: transparent;
+            z-index: 0;
+        }
     }
 }
 

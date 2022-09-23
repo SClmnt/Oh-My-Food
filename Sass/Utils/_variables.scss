@@ -5,8 +5,11 @@ $tertiary-color: #99E2D0;
 $light-gray:#f6f6f6;
 $dark-gray:#eaeaea;
 
+$shadow:0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 3px 20px 0 rgba(0, 0, 0, 0.05);
+
 $dark-bckground:#353535;
 $negative: white;
 
 $radiant: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
 
+$breakpoints: (tablette:768px ,desktop:1024px)
