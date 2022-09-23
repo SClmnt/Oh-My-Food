@@ -104,7 +104,7 @@ a {
   position: absolute;
   font-size: 5vw;
   z-index: 2;
-  color: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
+  color: #9356DC;
 }
 .caption__heart--full:hover {
   opacity: 1;

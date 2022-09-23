@@ -15,7 +15,7 @@
             font-size: 5vw;
             z-index: 2;
             @extend %heartpos;
-            color: $radiant;    
+            color: $primary-color;    
             &:hover{
                 opacity: 1;
                 
