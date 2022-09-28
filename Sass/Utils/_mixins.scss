@@ -10,6 +10,7 @@
         width: 40%;
         font-size: 2vw;
         padding: 2vw 0vw;
+        
     }
     
     &__form{
@@ -23,20 +24,32 @@
     &__title{
         align-self: flex-start;
         margin: 1vw 0vw;
+        @include desktop{
+            align-self: center;
+        }
         &--center{
             font-size: 7vw;
             width: 85%;
             text-align: center;
             @include desktop {
-                font-size: 3vw
+                font-size: 3vw;
+                
             }
         }
     }
     &__block{
-        @extend .container;
         width: 89%;
         margin: 0vw 0vw;
         padding: 0vh 0vw;
+        &--row{
+            @include desktop{
+                width: 98vw;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin: 2vw 0vw;
+            }
+        }
     }
     &__btn--purple{
         padding: 5vw;
@@ -48,6 +61,11 @@
         font-size: 4vw;
         @extend %shadow;
         transition: filter 500ms, box-shadow 500ms 150ms;
+         @include desktop{
+            text-align: center;
+            padding: 1.5vw;
+            font-size: 2vw;
+         }
         &:hover{
             filter: brightness(110%);
             box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,55 +79,7 @@
     }
 }
 
-@mixin btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    @extend %radius;
-    padding: 2vw 0vw;
-    margin: 3.5vw auto;
-    &__span{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    &--line{
-        @extend .btn;
-        background-color: $light-gray;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    &--line--purple{
-        @extend .btn--line;       
-        background-color: lighten($color: $primary-color, $amount: 35%);
-    } 
-    &__nmb{
-        display: flex;
-        color: white;
-        background-color: $primary-color;
-        width: 8vw;
-        height: 8vw;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8vw;
-        margin: 2vw;
-        margin-left: -3vw;
-        
-    }
-    &__icon{
-        color: $dark-bckground;
-        opacity: 0.7;
-        &--purple{
-            color: $primary-color;
-        }
-    }
-    &__txt--bold{
-        font-weight: bold;
-        margin: 2vw;
-    }
 
-}
 
 @mixin heartp_pos {
     top: 0%;
@@ -124,6 +94,13 @@
 
 @mixin desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+    
+}
+
+@mixin tablette {
+    @media screen and (min-width: map-get($breakpoints, tablette)) {
         @content;
     }
     

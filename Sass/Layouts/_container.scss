@@ -2,7 +2,6 @@
     @include column-centered;
     &--lightgray{
         background-color: $light-gray ;
-        @extend .container;
         @include desktop{
             background-color: transparent;
             z-index: 0;
@@ -18,6 +17,11 @@
     @extend %shadow;
     display: flex;
     position: relative;
+    @include desktop{
+        width: 37%;
+        height: 40%;
+
+    }
     .fig{
         display: flex;
         width: 100%;
@@ -25,6 +29,26 @@
         flex-direction: column;
         overflow: hidden;
         @extend %radius;
+
+        &__label{
+            &--new{
+                position: absolute;
+                background-color: rgb(153, 226, 208);
+                color: rgb(19, 146, 115);
+                font-weight: bold;
+                left: 70%;
+                font-size: 4vw;
+                padding: 1vw 2.5vw;
+                border-radius: 1vw;
+                @extend %shadow;
+                @include desktop{
+                    font-size: 1.2vw;
+                    left: 80%;
+                    padding: 0.8vw 0.7vw;
+                    border-radius: 0.5vw;
+                }
+            }
+        }
         &__img{
             display: block;
             width: 100%;
@@ -33,6 +57,10 @@
             @extend %cornertop;
             object-fit: cover;
             object-position: center;
+            position: relative;
+            @include desktop{
+                height: 15vw;
+            }
         }
         
     }
@@ -44,10 +72,16 @@
         padding: 3vw;
         background-color: $negative;
         @extend %cornerbot;
+        @include desktop{
+            font-size: 1.5vw;
+            padding: 1vw 1vw;
+            align-items: baseline;
+            margin: auto 0vw;
+        }
         &__txt{
             margin: 0vw 0vw;
             &--bold{
-                @extend .caption__txt;
+                
                 font-weight: bold;
             }
         }

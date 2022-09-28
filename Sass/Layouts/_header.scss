@@ -39,17 +39,36 @@
     justify-content: space-between;
     padding: 5vw 10vw;
     font-size: 4vw;
+    @include desktop{
+        font-size: 1.5vw;
+        padding: 1vw 2vw;
+        flex-wrap: wrap;
+    }
     >div{
         display: flex;
         flex-direction: column;
+        @include desktop{
+            flex-direction: row;
+        }
     }
     &__txt{
         color: $negative;
-        padding: 1vw 0vw;
+        padding: 0.5vw 0vw;
+        @include desktop{
+            width: max-content;
+            margin: auto;
+        }
         &--logo{
             @extend .footer__txt;
             font-family: 'Shrikhand';
-            
+            @include desktop{
+                display: flex;
+                justify-content: center;
+                width: max-content;
+                font-size: 2vw;
+                padding: 1vw 0vw;
+                margin: auto;
+            }
         }
         &--bold{
             @extend .footer__txt;

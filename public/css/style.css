@@ -1,25 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Shrikhand&display=swap");
-.card, .container__btn--purple, .header > img, .btn, .btn--line, .btn--line--purple {
+.card .fig__label--new, .card, .container__btn--purple, .header > img, .btn {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 3px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.card .fig, .card, .btn, .btn--line, .btn--line--purple {
+.card .fig, .card, .btn {
   border-radius: 5vw;
+}
+@media screen and (min-width: 1024px) {
+  .card .fig, .card, .btn {
+    border-radius: 1.5vw;
+  }
 }
 
 .card .fig__img {
   border-top-left-radius: 5vw;
   border-top-right-radius: 5vw;
 }
+@media screen and (min-width: 1024px) {
+  .card .fig__img {
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 1.5vw;
+  }
+}
 
 .card .caption {
   border-bottom-left-radius: 5vw;
   border-bottom-right-radius: 5vw;
 }
+@media screen and (min-width: 1024px) {
+  .card .caption {
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+  }
+}
 
 .caption__heart--empty, .caption__heart--full {
   top: 0%;
   left: 0%;
+}
+@media screen and (min-width: 1024px) {
+  .caption__heart--empty, .caption__heart--full {
+    top: -1vw;
+    left: -2vw;
+  }
 }
 
 html, body {
@@ -48,7 +71,7 @@ a {
   color: black;
 }
 
-.btn, .btn--line, .btn--line--purple {
+.btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,10 +84,15 @@ a {
   flex-direction: column;
   justify-content: space-around;
 }
-.btn--line, .btn--line--purple {
+.btn--line {
   background-color: #f6f6f6;
   align-items: center;
   justify-content: flex-start;
+}
+@media screen and (min-width: 1024px) {
+  .btn--line {
+    padding: 0.5vw;
+  }
 }
 .btn--line--purple {
   background-color: #f2eafb;
@@ -80,6 +108,14 @@ a {
   border-radius: 8vw;
   margin: 2vw;
   margin-left: -3vw;
+}
+@media screen and (min-width: 1024px) {
+  .btn__nmb {
+    padding: 0vw;
+    width: 3vw;
+    height: 3vw;
+    margin: 2vw;
+  }
 }
 .btn__icon {
   color: #353535;
@@ -98,20 +134,26 @@ a {
   padding: 3vw;
   border: none;
   background-color: white;
+  font-size: 5vw;
+}
+@media screen and (min-width: 1024px) {
+  .caption__heart {
+    font-size: 2vw;
+    padding: 0vw;
+  }
 }
 .caption__heart--full {
   opacity: 0;
   position: absolute;
-  font-size: 5vw;
   z-index: 2;
   color: #9356DC;
+  transition: all 500ms;
 }
 .caption__heart--full:hover {
   opacity: 1;
 }
 .caption__heart--empty {
   position: absolute;
-  font-size: 5vw;
   z-index: 1;
 }
 
@@ -158,22 +200,50 @@ a {
   padding: 5vw 10vw;
   font-size: 4vw;
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    font-size: 1.5vw;
+    padding: 1vw 2vw;
+    flex-wrap: wrap;
+  }
+}
 .footer > div {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1024px) {
+  .footer > div {
+    flex-direction: row;
+  }
+}
 .footer__txt, .footer__txt--bold, .footer__txt--logo {
   color: white;
-  padding: 1vw 0vw;
+  padding: 0.5vw 0vw;
+}
+@media screen and (min-width: 1024px) {
+  .footer__txt, .footer__txt--bold, .footer__txt--logo {
+    width: max-content;
+    margin: auto;
+  }
 }
 .footer__txt--logo {
   font-family: "Shrikhand";
+}
+@media screen and (min-width: 1024px) {
+  .footer__txt--logo {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    font-size: 2vw;
+    padding: 1vw 0vw;
+    margin: auto;
+  }
 }
 .footer__txt--bold {
   font-weight: bold;
 }
 
-.container, .container--lightgray, .container__block {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -182,7 +252,7 @@ a {
   padding: 4vw 5vw;
 }
 @media screen and (min-width: 1024px) {
-  .container, .container--lightgray, .container__block {
+  .container {
     width: 40%;
     font-size: 2vw;
     padding: 2vw 0vw;
@@ -201,6 +271,11 @@ a {
   align-self: flex-start;
   margin: 1vw 0vw;
 }
+@media screen and (min-width: 1024px) {
+  .container__title {
+    align-self: center;
+  }
+}
 .container__title--center {
   font-size: 7vw;
   width: 85%;
@@ -216,6 +291,15 @@ a {
   margin: 0vw 0vw;
   padding: 0vh 0vw;
 }
+@media screen and (min-width: 1024px) {
+  .container__block--row {
+    width: 98vw;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2vw 0vw;
+  }
+}
 .container__btn--purple {
   padding: 5vw;
   border-radius: 10vw;
@@ -225,6 +309,13 @@ a {
   margin: 6vw 0vw;
   font-size: 4vw;
   transition: filter 500ms, box-shadow 500ms 150ms;
+}
+@media screen and (min-width: 1024px) {
+  .container__btn--purple {
+    text-align: center;
+    padding: 1.5vw;
+    font-size: 2vw;
+  }
 }
 .container__btn--purple:hover {
   filter: brightness(110%);
@@ -252,12 +343,36 @@ a {
   display: flex;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 37%;
+    height: 40%;
+  }
+}
 .card .fig {
   display: flex;
   width: 100%;
   margin: 0;
   flex-direction: column;
   overflow: hidden;
+}
+.card .fig__label--new {
+  position: absolute;
+  background-color: rgb(153, 226, 208);
+  color: rgb(19, 146, 115);
+  font-weight: bold;
+  left: 70%;
+  font-size: 4vw;
+  padding: 1vw 2.5vw;
+  border-radius: 1vw;
+}
+@media screen and (min-width: 1024px) {
+  .card .fig__label--new {
+    font-size: 1.2vw;
+    left: 80%;
+    padding: 0.8vw 0.7vw;
+    border-radius: 0.5vw;
+  }
 }
 .card .fig__img {
   display: block;
@@ -266,6 +381,12 @@ a {
   margin: 0;
   object-fit: cover;
   object-position: center;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .card .fig__img {
+    height: 15vw;
+  }
 }
 .card .caption {
   display: flex;
@@ -275,7 +396,15 @@ a {
   padding: 3vw;
   background-color: white;
 }
-.card .caption__txt, .card .caption__txt--bold {
+@media screen and (min-width: 1024px) {
+  .card .caption {
+    font-size: 1.5vw;
+    padding: 1vw 1vw;
+    align-items: baseline;
+    margin: auto 0vw;
+  }
+}
+.card .caption__txt {
   margin: 0vw 0vw;
 }
 .card .caption__txt--bold {

@@ -3,19 +3,34 @@
 }
 %radius{
     border-radius: 5vw;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        border-radius: 1.5vw;
+    }
 }
 
 %cornertop{
     border-top-left-radius: 5vw;
     border-top-right-radius: 5vw;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        border-top-left-radius: 1.5vw;
+        border-top-right-radius: 1.5vw;
+    }
 }
 
 %cornerbot{
     border-bottom-left-radius: 5vw;
     border-bottom-right-radius: 5vw;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        border-bottom-left-radius: 1.5vw;
+        border-bottom-right-radius: 1.5vw;
+    }
 }
 
 %heartpos{
     top: 0%;
     left: 0%;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        top: -1vw;
+        left: -2vw;
+    }
 }
