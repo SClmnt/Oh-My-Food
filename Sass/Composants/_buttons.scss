@@ -5,8 +5,83 @@
     justify-content: space-between;
     width: 100%;
     @extend %radius;
-    padding: 2vw 0vw;
+    @extend %shadow;
+    padding: 0vw 0vw;
     margin: 3.5vw auto;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    &__column{
+        width: 76%;
+        min-width: 0;
+        
+        display: flex;
+        flex-direction: column; 
+        flex-wrap: wrap;
+        overflow: hidden;
+        white-space: nowrap;              
+        text-overflow: ellipsis; 
+        padding: 3vw 3vw;
+        padding-right: 0vw;
+        transition: width 600ms;
+        position: relative;
+        
+        
+    }
+    &__txt{
+        
+        overflow: hidden;
+        white-space: nowrap;              
+        text-overflow: ellipsis; 
+        margin: 0vw;
+        font-size: 4.1vw;
+        width: 100%;
+        &--bold{
+            font-weight: bold;
+        }
+        &--price{
+            position: absolute;
+            left: 78.69%;
+            display: flex;
+            align-self: flex-end;
+            padding: 7.9vw 6vw 3vw 6vw;
+            transform: translateX(0);
+            background-color: $negative;
+            transition:  left 600ms ,border-radius 600ms;
+            z-index: 3;
+            border-top-right-radius: 5vw;
+            border-bottom-right-radius: 5vw;
+            width: fit-content;
+            
+        }
+    }
+    &__activator{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        &:hover> .btn__column{
+            width: 56.9%;
+        }
+        &:hover> .btn__txt--price{
+            left: 60%;
+            border-radius: 0;
+            }
+       
+    
+    }
+
+    &__check{
+        font-size: 6vw;
+        position: absolute;
+        left: 80%;
+        color: white;
+        background-color: $tertiary-color;
+        padding: 4.9vw 6vw;
+        border-top-right-radius: 5vw;
+        border-bottom-right-radius: 5vw; 
+
+    }
     &__span{
         display: flex;
         flex-direction: column;
@@ -17,11 +92,12 @@
         background-color: $light-gray;
         align-items: center;
         justify-content: flex-start;
+        padding: 2vw 0vw;
         @include desktop{
             padding: 0.5vw;
         }
     }
-    &--line--purple{
+    &--purple{
                
         background-color: lighten($color: $primary-color, $amount: 35%);
     } 
@@ -51,11 +127,12 @@
             color: $primary-color;
         }
     }
-    &__txt--bold{
+    &_line{
+        &__txt--bold{
         font-weight: bold;
-        margin: 2vw;
+        margin: 2vw;}
     }
-    @extend %shadow;
+    
 }
 
 .caption__heart{
@@ -64,15 +141,21 @@
     border: none;
     background-color: white;
     font-size: 5vw;
+    @extend %heartpos;
+    @include tablette{
+        font-size: 4vw;
+        padding: 0vw;
+    }
     @include desktop{
         font-size: 2vw;
         padding: 0vw;
     }
+
         &--full{
             opacity: 0;
             position: absolute;            
             z-index: 2;
-            @extend %heartpos;
+
             color: $primary-color;
             transition: all 500ms;    
             &:hover{
@@ -83,7 +166,21 @@
         &--empty{           
             position: absolute;           
             z-index: 1;
-            @extend %heartpos; 
+            
         }
     
+}
+
+.menu__heart{
+    @extend .caption__heart;
+    background-color: $light-gray;
+    left: 0vw;
+    top: 25%;
+    font-size: 8vw;
+        &--full{
+            @extend .caption__heart--full;
+        }
+        &--empty{
+            @extend .caption__heart--empty;
+        }
 }

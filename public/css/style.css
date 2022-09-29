@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Shrikhand&display=swap");
-.card .fig__label--new, .card, .container__btn--purple, .header > img, .btn {
+.card .fig__label--new, .card, .container__btn--purple, .header__logo, .btn {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 3px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -34,12 +34,18 @@
   }
 }
 
-.caption__heart--empty, .caption__heart--full {
-  top: 0%;
-  left: 0%;
+.caption__heart, .menu__heart {
+  top: -3vw;
+  left: -2vw;
+}
+@media screen and (min-width: 768px) {
+  .caption__heart, .menu__heart {
+    top: -2vw;
+    left: -5vw;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .caption__heart--empty, .caption__heart--full {
+  .caption__heart, .menu__heart {
     top: -1vw;
     left: -2vw;
   }
@@ -76,8 +82,72 @@ a {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 2vw 0vw;
+  padding: 0vw 0vw;
   margin: 3.5vw auto;
+  background-color: white;
+  align-items: center;
+  position: relative;
+}
+.btn__column {
+  width: 76%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 3vw 3vw;
+  padding-right: 0vw;
+  transition: width 600ms;
+  position: relative;
+}
+.btn__txt {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0vw;
+  font-size: 4.1vw;
+  width: 100%;
+}
+.btn__txt--bold {
+  font-weight: bold;
+}
+.btn__txt--price {
+  position: absolute;
+  left: 78.69%;
+  display: flex;
+  align-self: flex-end;
+  padding: 7.9vw 6vw 3vw 6vw;
+  transform: translateX(0);
+  background-color: white;
+  transition: left 600ms, border-radius 600ms;
+  z-index: 3;
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  width: fit-content;
+}
+.btn__activator {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn__activator:hover > .btn__column {
+  width: 56.9%;
+}
+.btn__activator:hover > .btn__txt--price {
+  left: 60%;
+  border-radius: 0;
+}
+.btn__check {
+  font-size: 6vw;
+  position: absolute;
+  left: 80%;
+  color: white;
+  background-color: #99E2D0;
+  padding: 4.9vw 6vw;
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 5vw;
 }
 .btn__span {
   display: flex;
@@ -88,13 +158,14 @@ a {
   background-color: #f6f6f6;
   align-items: center;
   justify-content: flex-start;
+  padding: 2vw 0vw;
 }
 @media screen and (min-width: 1024px) {
   .btn--line {
     padding: 0.5vw;
   }
 }
-.btn--line--purple {
+.btn--purple {
   background-color: #f2eafb;
 }
 .btn__nmb {
@@ -124,45 +195,67 @@ a {
 .btn__icon--purple {
   color: #9356DC;
 }
-.btn__txt--bold {
+.btn_line__txt--bold {
   font-weight: bold;
   margin: 2vw;
 }
 
-.caption__heart {
+.caption__heart, .menu__heart {
   position: relative;
   padding: 3vw;
   border: none;
   background-color: white;
   font-size: 5vw;
 }
+@media screen and (min-width: 768px) {
+  .caption__heart, .menu__heart {
+    font-size: 4vw;
+    padding: 0vw;
+  }
+}
 @media screen and (min-width: 1024px) {
-  .caption__heart {
+  .caption__heart, .menu__heart {
     font-size: 2vw;
     padding: 0vw;
   }
 }
-.caption__heart--full {
+.caption__heart--full, .menu__heart--full {
   opacity: 0;
   position: absolute;
   z-index: 2;
   color: #9356DC;
   transition: all 500ms;
 }
-.caption__heart--full:hover {
+.caption__heart--full:hover, .menu__heart--full:hover {
   opacity: 1;
 }
-.caption__heart--empty {
+.caption__heart--empty, .menu__heart--empty {
   position: absolute;
   z-index: 1;
 }
 
+.menu__heart {
+  background-color: #f6f6f6;
+  left: 0vw;
+  top: 25%;
+  font-size: 8vw;
+}
 .header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin: 0vh auto;
   padding: 0vw 0vw;
+}
+.header--back {
+  flex-direction: row;
+  align-items: center;
+  box-shadow: none;
+  padding: 0vw 0vw;
+  position: fixed;
+  z-index: 4;
+  background-color: white;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -173,7 +266,7 @@ a {
     z-index: 1;
   }
 }
-.header > img {
+.header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,13 +277,21 @@ a {
   z-index: 1;
   width: 100%;
 }
+.header__logo--no_shadow {
+  box-shadow: none;
+  margin-left: -9.5vw;
+}
 @media screen and (min-width: 1024px) {
-  .header > img {
+  .header__logo {
     height: 4vw;
     transform: rotate(-5deg);
     max-width: 50%;
     box-shadow: none;
   }
+}
+.header__arrow {
+  margin-left: 5vw;
+  z-index: 4;
 }
 
 .footer {
@@ -199,6 +300,7 @@ a {
   justify-content: space-between;
   padding: 5vw 10vw;
   font-size: 4vw;
+  background-color: #353535;
 }
 @media screen and (min-width: 1024px) {
   .footer {
@@ -216,12 +318,12 @@ a {
     flex-direction: row;
   }
 }
-.footer__txt, .footer__txt--bold, .footer__txt--logo {
+.footer__txt {
   color: white;
   padding: 0.5vw 0vw;
 }
 @media screen and (min-width: 1024px) {
-  .footer__txt, .footer__txt--bold, .footer__txt--logo {
+  .footer__txt {
     width: max-content;
     margin: auto;
   }
@@ -243,6 +345,18 @@ a {
   font-weight: bold;
 }
 
+.background {
+  background-position: top;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-top: 0vh;
+  padding-top: 70vw;
+}
+.background--palette {
+  background-image: url(../../images/restaurants/la_palette_du_gout.jpg);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -257,6 +371,11 @@ a {
     font-size: 2vw;
     padding: 2vw 0vw;
   }
+}
+.container--menu {
+  margin-top: -15vw;
+  border-top-left-radius: 10vw;
+  border-top-right-radius: 10vw;
 }
 .container__form {
   padding: 0vw 0vw;
@@ -290,6 +409,14 @@ a {
   width: 89%;
   margin: 0vw 0vw;
   padding: 0vh 0vw;
+}
+@media screen and (min-width: 768px) {
+  .container__block--row {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2vw 0vw;
+  }
 }
 @media screen and (min-width: 1024px) {
   .container__block--row {
@@ -343,10 +470,16 @@ a {
   display: flex;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .card {
+    width: 45%;
+    height: 40%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .card {
-    width: 37%;
-    height: 40%;
+    width: 23%;
+    height: 80%;
   }
 }
 .card .fig {
@@ -358,7 +491,7 @@ a {
 }
 .card .fig__label--new {
   position: absolute;
-  background-color: rgb(153, 226, 208);
+  background-color: #99E2D0;
   color: rgb(19, 146, 115);
   font-weight: bold;
   left: 70%;
@@ -366,10 +499,18 @@ a {
   padding: 1vw 2.5vw;
   border-radius: 1vw;
 }
+@media screen and (min-width: 768px) {
+  .card .fig__label--new {
+    font-size: 2vw;
+    left: 70%;
+    padding: 0.8vw 0.7vw;
+    border-radius: 0.5vw;
+  }
+}
 @media screen and (min-width: 1024px) {
   .card .fig__label--new {
     font-size: 1.2vw;
-    left: 80%;
+    left: 70%;
     padding: 0.8vw 0.7vw;
     border-radius: 0.5vw;
   }
@@ -383,6 +524,11 @@ a {
   object-position: center;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .card .fig__img {
+    height: 25vw;
+  }
+}
 @media screen and (min-width: 1024px) {
   .card .fig__img {
     height: 15vw;
@@ -395,6 +541,13 @@ a {
   align-items: center;
   padding: 3vw;
   background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .card .caption {
+    font-size: 2.5vw;
+    margin: auto 0vw;
+    padding: 3vw 3vw;
+  }
 }
 @media screen and (min-width: 1024px) {
   .card .caption {
@@ -416,8 +569,34 @@ a {
   justify-content: center;
 }
 
-footer {
-  background-color: #353535;
+.menu__section {
+  width: 100%;
+}
+.menu__span {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu__span > div {
+  position: relative;
+  width: 15%;
+}
+.menu__name {
+  font-family: "Shrikhand";
+  font-size: 8vw;
+}
+
+.title_block__txt {
+  font-weight: 300;
+  font-size: 6vw;
+  margin-bottom: 2vw;
+}
+.title_block__underscore {
+  width: 15vw;
+  height: 1vw;
+  background-color: #99E2D0;
 }
 
 form {

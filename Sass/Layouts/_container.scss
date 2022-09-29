@@ -1,5 +1,105 @@
+.background{
+    background-position: top;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin-top: 0vh;
+    padding-top: 70vw;
+    
+    &--palette{
+        background-image: url(../../images/restaurants/la_palette_du_gout.jpg);
+    }
+}
 .container{
-    @include column-centered;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;  
+    margin: 0vw auto;
+    padding: 4vw 5vw;
+    @include desktop{
+        width: 40%;
+        font-size: 2vw;
+        padding: 2vw 0vw;
+        
+    }
+    &--menu{
+        margin-top: -15vw;
+        border-top-left-radius: 10vw;
+        border-top-right-radius: 10vw;
+    }
+    &__form{
+        padding: 0vw 0vw;
+        @include desktop{
+            width: 30%;
+            height: 100%;
+        }
+    }
+
+    &__title{
+        align-self: flex-start;
+        margin: 1vw 0vw;
+        @include desktop{
+            align-self: center;
+        }
+        &--center{
+            font-size: 7vw;
+            width: 85%;
+            text-align: center;
+            @include desktop {
+                font-size: 3vw;
+                
+            }
+        }
+    }
+    &__block{
+        width: 89%;
+        margin: 0vw 0vw;
+        padding: 0vh 0vw;
+        &--row{  
+            @include tablette{
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin: 2vw 0vw;
+            }
+            @include desktop{
+                width: 98vw;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin: 2vw 0vw;
+            }
+
+        }
+    }
+    &__btn--purple{
+        padding: 5vw;
+        border-radius: 10vw;
+        background: $radiant;
+        border: none;
+        color: $negative;
+        margin: 6vw 0vw;
+        font-size: 4vw;
+        @extend %shadow;
+        transition: filter 500ms, box-shadow 500ms 150ms;
+         @include desktop{
+            text-align: center;
+            padding: 1.5vw;
+            font-size: 2vw;
+         }
+        &:hover{
+            filter: brightness(110%);
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+    }
+    &__txt{
+        margin: 1vw 0vw;
+        width: 110%;
+        text-align: center;
+    }
+
     &--lightgray{
         background-color: $light-gray ;
         @include desktop{
@@ -16,12 +116,18 @@
     overflow: hidden;
     @extend %shadow;
     display: flex;
-    position: relative;
-    @include desktop{
-        width: 37%;
+    position: relative; 
+    @include tablette{
+        width: 45%;
         height: 40%;
 
     }
+    @include desktop{
+        width: 23%;
+        height: 80%;
+
+    }
+
     .fig{
         display: flex;
         width: 100%;
@@ -33,20 +139,29 @@
         &__label{
             &--new{
                 position: absolute;
-                background-color: rgb(153, 226, 208);
+                background-color: $tertiary-color;
                 color: rgb(19, 146, 115);
                 font-weight: bold;
                 left: 70%;
                 font-size: 4vw;
                 padding: 1vw 2.5vw;
                 border-radius: 1vw;
-                @extend %shadow;
+                @extend %shadow; 
+
+                @include tablette{
+                    font-size: 2vw;
+                    left: 70%;
+                    padding: 0.8vw 0.7vw;
+                    border-radius: 0.5vw;
+            
+                }
                 @include desktop{
                     font-size: 1.2vw;
-                    left: 80%;
+                    left: 70%;
                     padding: 0.8vw 0.7vw;
                     border-radius: 0.5vw;
                 }
+
             }
         }
         &__img{
@@ -57,7 +172,10 @@
             @extend %cornertop;
             object-fit: cover;
             object-position: center;
-            position: relative;
+            position: relative;            
+            @include tablette{
+                height: 25vw;
+            }
             @include desktop{
                 height: 15vw;
             }
@@ -72,7 +190,13 @@
         padding: 3vw;
         background-color: $negative;
         @extend %cornerbot;
-        @include desktop{
+
+        @include tablette{
+            font-size: 2.5vw;
+            margin: auto 0vw;
+            padding: 3vw 3vw;
+        }       
+         @include desktop{
             font-size: 1.5vw;
             padding: 1vw 1vw;
             align-items: baseline;
@@ -93,6 +217,37 @@
     }
 }
 
-footer{
-    background-color: $dark-bckground;
+.menu{
+    &__section{
+        width: 100%;
+    }
+    &__span{
+        >div{
+            position: relative;
+            width: 15%;
+        }
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__name{
+        font-family: $logopolice;
+        font-size: 8vw;
+
+    }
+}
+
+.title_block{
+    &__txt{
+        font-weight: 300;
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+    &__underscore{
+        width: 15vw;
+        height: 1vw;
+        background-color: $tertiary-color;
+    }
 }

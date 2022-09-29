@@ -4,7 +4,17 @@
     flex-direction: column;
     margin: 0vh auto;
     padding: 0vw 0vw;
-
+    
+    &--back{
+        flex-direction: row;
+        align-items: center;
+        box-shadow: none;
+        padding: 0vw 0vw;
+        position: fixed;
+        z-index: 4;
+        background-color: white;
+        width: 100%
+    }
     @include desktop{
         padding: 0vw 0vw;
         flex-direction: row;
@@ -12,17 +22,23 @@
         box-shadow: $shadow;
         z-index: 1;
     }
-    >img{
+
+    &__logo{
         display: flex;
         justify-content: center;
         align-items: center;
         width: auto;
         height: 8vw;
         margin: 0 auto;
+        
         padding: 3vw 0vw;
         @extend %shadow;
         z-index: 1;
         width: 100%;
+        &--no_shadow{
+            box-shadow: none;
+            margin-left: -9.5vw;
+        }
         @include desktop {
             height: 4vw;
             transform: rotate(-5deg);
@@ -30,6 +46,10 @@
             box-shadow: none;
             
         }
+    }
+    &__arrow{
+        margin-left: 5vw;
+        z-index: 4;
     }
 }
 
@@ -39,6 +59,7 @@
     justify-content: space-between;
     padding: 5vw 10vw;
     font-size: 4vw;
+    background-color: $dark-bckground;
     @include desktop{
         font-size: 1.5vw;
         padding: 1vw 2vw;
@@ -58,9 +79,8 @@
             width: max-content;
             margin: auto;
         }
-        &--logo{
-            @extend .footer__txt;
-            font-family: 'Shrikhand';
+        &--logo{            
+            font-family: $logopolice;
             @include desktop{
                 display: flex;
                 justify-content: center;
@@ -70,8 +90,7 @@
                 margin: auto;
             }
         }
-        &--bold{
-            @extend .footer__txt;
+        &--bold{           
             font-weight: bold;
         }
     }
