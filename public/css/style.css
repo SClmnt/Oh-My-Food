@@ -51,6 +51,14 @@
   }
 }
 
+@keyframes check {
+  0% {
+    transform: rotate(0deg) scaleX(0);
+  }
+  100% {
+    transform: rotate(360deg) scaleX(1);
+  }
+}
 html, body {
   scroll-behavior: smooth;
   height: 100vh;
@@ -121,7 +129,7 @@ a {
   padding: 7.9vw 6vw 3vw 6vw;
   transform: translateX(0);
   background-color: white;
-  transition: left 600ms, border-radius 600ms;
+  transition: left 750ms, border-radius 750ms;
   z-index: 3;
   border-top-right-radius: 5vw;
   border-bottom-right-radius: 5vw;
@@ -139,13 +147,22 @@ a {
   left: 60%;
   border-radius: 0;
 }
+.btn__activator:hover + .btn__checkbox > .btn__check {
+  animation-name: check;
+  animation-duration: 600ms;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-direction: alternate;
+  transform-origin: 50% right;
+}
 .btn__check {
-  font-size: 6vw;
-  position: absolute;
-  left: 80%;
   color: white;
+}
+.btn__checkbox {
+  position: absolute;
+  left: 81%;
   background-color: #99E2D0;
-  padding: 4.9vw 6vw;
+  padding: 4.9vw 5.9vw;
   border-top-right-radius: 5vw;
   border-bottom-right-radius: 5vw;
 }

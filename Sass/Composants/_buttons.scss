@@ -47,7 +47,7 @@
             padding: 7.9vw 6vw 3vw 6vw;
             transform: translateX(0);
             background-color: $negative;
-            transition:  left 600ms ,border-radius 600ms;
+            transition:  left 750ms ,border-radius 750ms;
             z-index: 3;
             border-top-right-radius: 5vw;
             border-bottom-right-radius: 5vw;
@@ -67,20 +67,32 @@
             left: 60%;
             border-radius: 0;
             }
-       
+        &:hover+ .btn__checkbox> .btn__check{
+            animation-name: check;
+            animation-duration: 600ms;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-direction: alternate;
+            transform-origin: 50% right;
+        }
     
     }
-
     &__check{
-        font-size: 6vw;
-        position: absolute;
-        left: 80%;
+        
+        
         color: white;
+        
+    }
+    &__checkbox{
+        
+        position: absolute;
+        left: 81%;
+        
         background-color: $tertiary-color;
-        padding: 4.9vw 6vw;
+        padding: 4.9vw 5.9vw;
         border-top-right-radius: 5vw;
         border-bottom-right-radius: 5vw; 
-
+        
     }
     &__span{
         display: flex;
