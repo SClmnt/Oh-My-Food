@@ -12,7 +12,7 @@
     align-items: center;
     position: relative;
     &__column{
-        width: 76%;
+        width: 75%;
         min-width: 0;
         
         display: flex;
@@ -44,15 +44,23 @@
             left: 78.69%;
             display: flex;
             align-self: flex-end;
-            padding: 7.9vw 6vw 3vw 6vw;
+            padding: 0vw 6vw 0vw 6vw;
             transform: translateX(0);
             background-color: $negative;
-            transition:  left 750ms ,border-radius 750ms;
+            transition:  left 400ms ,border-radius 400ms;
+            transition-timing-function: linear;
             z-index: 3;
             border-top-right-radius: 5vw;
             border-bottom-right-radius: 5vw;
             width: fit-content;
+            height: 100%;
             
+        }
+        &--baseline{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 3.4vw 0vw;
         }
     }
     &__activator{
@@ -69,10 +77,10 @@
             }
         &:hover+ .btn__checkbox> .btn__check{
             animation-name: check;
-            animation-duration: 600ms;
+            animation-duration: 400ms;
             animation-timing-function: linear;
             animation-direction: alternate;
-            animation-direction: alternate;
+
             transform-origin: 50% right;
         }
     
@@ -87,9 +95,9 @@
         
         position: absolute;
         left: 81%;
-        
+        overflow: hidden;
         background-color: $tertiary-color;
-        padding: 4.9vw 5.9vw;
+        padding: 5vw 6vw;
         border-top-right-radius: 5vw;
         border-bottom-right-radius: 5vw; 
         
