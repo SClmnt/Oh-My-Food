@@ -9,6 +9,15 @@
     &--palette{
         background-image: url(../../images/restaurants/la_palette_du_gout.jpg);
     }
+    &--delice{
+        background-image: url(../../images/restaurants/le_delice_des_sens.jpg);
+    }
+    &--note{
+        background-image: url(../../images/restaurants/la_note_enchantee.jpg);
+    }
+    &--fr{
+        background-image: url(../../images/restaurants/a_la_francaise.jpg);
+    }
 }
 .container{
     display: flex;

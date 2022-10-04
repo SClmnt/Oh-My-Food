@@ -16,3 +16,6 @@ $radiant: linear-gradient(350deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
 
 $breakpoints: (tablette:768px ,desktop:1024px);
 
+$num-btn: 4;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-btn;

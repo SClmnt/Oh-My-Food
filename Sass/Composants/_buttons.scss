@@ -11,6 +11,16 @@
     background-color: white;
     align-items: center;
     position: relative;
+    opacity: 1;   
+    &__load{
+        animation: btn $anim-dur;
+        animation-fill-mode: backwards;
+        @for $i from 1 through $num-btn {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+        }
+    }
     &__column{
         width: 75%;
         min-width: 0;
@@ -177,7 +187,8 @@
             z-index: 2;
 
             color: $primary-color;
-            transition: all 500ms;    
+            transition: all 500ms;
+            
             &:hover{
                 opacity: 1;
                 

@@ -59,6 +59,16 @@
     transform: translateX(0vw) rotate(360deg);
   }
 }
+@keyframes btn {
+  0% {
+    opacity: 0;
+    transform: translateY(2vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
 html, body {
   scroll-behavior: smooth;
   height: 100vh;
@@ -95,6 +105,23 @@ a {
   background-color: white;
   align-items: center;
   position: relative;
+  opacity: 1;
+}
+.btn__load {
+  animation: btn 1000ms;
+  animation-fill-mode: backwards;
+}
+.btn__load--1 {
+  animation-delay: 250ms;
+}
+.btn__load--2 {
+  animation-delay: 500ms;
+}
+.btn__load--3 {
+  animation-delay: 750ms;
+}
+.btn__load--4 {
+  animation-delay: 1000ms;
 }
 .btn__column {
   width: 75%;
@@ -380,6 +407,15 @@ a {
 }
 .background--palette {
   background-image: url(../../images/restaurants/la_palette_du_gout.jpg);
+}
+.background--delice {
+  background-image: url(../../images/restaurants/le_delice_des_sens.jpg);
+}
+.background--note {
+  background-image: url(../../images/restaurants/la_note_enchantee.jpg);
+}
+.background--fr {
+  background-image: url(../../images/restaurants/a_la_francaise.jpg);
 }
 
 .container {
