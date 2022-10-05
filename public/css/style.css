@@ -176,16 +176,16 @@ a {
   animation-iteration-count: infinite;
 }
 .heat__steam--1 {
-  animation-delay: 430ms;
+  animation-delay: 520ms;
 }
 .heat__steam--2 {
-  animation-delay: 110ms;
+  animation-delay: 305ms;
 }
 .heat__steam--3 {
-  animation-delay: 630ms;
+  animation-delay: 615ms;
 }
 .heat__steam--4 {
-  animation-delay: 580ms;
+  animation-delay: 385ms;
 }
 .heat__steam--5 {
   animation-delay: 470ms;
@@ -722,6 +722,14 @@ a {
 .container__btn--purple:hover {
   filter: brightness(110%);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container__btn--menu {
+  padding: 5vw 15vw;
+}
+@media screen and (min-width: 1024px) {
+  .container__btn--menu {
+    padding: 1.5vw 4vw;
+  }
 }
 .container__txt {
   margin: 1vw 0vw;
