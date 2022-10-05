@@ -70,6 +70,16 @@
     transform: translateX(0vw) rotate(360deg);
   }
 }
+@media screen and (min-width: 1024px) {
+  @keyframes check {
+    0% {
+      transform: translateX(5vw) rotate(0deg);
+    }
+    100% {
+      transform: translateX(0vw) rotate(360deg);
+    }
+  }
+}
 @keyframes btn {
   0% {
     opacity: 0;
@@ -166,19 +176,19 @@ a {
   animation-iteration-count: infinite;
 }
 .heat__steam--1 {
-  animation-delay: 40ms;
+  animation-delay: 400ms;
 }
 .heat__steam--2 {
-  animation-delay: 170ms;
+  animation-delay: 335ms;
 }
 .heat__steam--3 {
-  animation-delay: 90ms;
+  animation-delay: 660ms;
 }
 .heat__steam--4 {
-  animation-delay: 730ms;
+  animation-delay: 220ms;
 }
 .heat__steam--5 {
-  animation-delay: 515ms;
+  animation-delay: 500ms;
 }
 
 .pan {
@@ -257,6 +267,11 @@ a {
   transition: width 600ms;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .btn__column {
+    padding: 1vw 1.5vw;
+  }
+}
 .btn__txt {
   overflow: hidden;
   white-space: nowrap;
@@ -267,7 +282,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .btn__txt {
-    font-size: 3vw;
+    font-size: 1.5vw;
   }
 }
 .btn__txt--bold {
@@ -281,11 +296,18 @@ a {
   padding: 0vw 6vw 0vw 6vw;
   transform: translateX(0);
   background-color: white;
-  transition: left 400ms, border-radius 400ms;
+  transition: left 400ms;
   transition-timing-function: linear;
   z-index: 3;
   width: fit-content;
   height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .btn__txt--price {
+    left: 80%;
+    padding: 0vw 1.5vw;
+    transition: left 900ms;
+  }
 }
 .btn__txt--baseline {
   display: flex;
@@ -303,7 +325,6 @@ a {
 }
 .btn__activator:hover > .btn__txt--price {
   left: 60%;
-  border-radius: 0;
 }
 .btn__activator:hover + .btn__checkbox > .btn__check {
   animation-name: check;
@@ -312,12 +333,17 @@ a {
   animation-direction: alternate;
   transform-origin: 50% right;
 }
+@media screen and (min-width: 1024px) {
+  .btn__activator:hover + .btn__checkbox > .btn__check {
+    animation-duration: 700ms;
+  }
+}
 .btn__check {
   color: white;
 }
 @media screen and (min-width: 1024px) {
   .btn__check {
-    font-size: 3.5vw;
+    font-size: 2vw;
   }
 }
 .btn__checkbox {
@@ -329,7 +355,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .btn__checkbox {
-    padding: 6vw 7vw;
+    padding: 2vw 1.6vw;
   }
 }
 .btn__span {
@@ -425,7 +451,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .menu__heart {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -621,6 +647,9 @@ a {
   .container--menu {
     width: 90%;
     background-color: #f6f6f6;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: normal;
   }
 }
 .container__form {
@@ -820,7 +849,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .menu__section {
-    width: 90%;
+    width: 30%;
   }
 }
 .menu__span {
@@ -845,7 +874,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .menu__name {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 
@@ -856,7 +885,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .title_block__txt {
-    font-size: 4vw;
+    font-size: 2vw;
   }
 }
 .title_block__underscore {
@@ -866,8 +895,8 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .title_block__underscore {
-    width: 10vw;
-    height: 0.8vw;
+    width: 5vw;
+    height: 0.6vw;
   }
 }
 

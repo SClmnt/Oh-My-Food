@@ -60,6 +60,9 @@
         @include desktop{
             width: 90%;
             background-color: $light-gray;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: normal;
         }
     }
     &__form{
@@ -259,7 +262,7 @@
     &__section{
         width: 100%;
         @include desktop{
-            width: 90%;
+            width: 30%;
         }
     }
     &__span{
@@ -280,7 +283,7 @@
         font-family: $logopolice;
         font-size: 8vw;
         @include desktop{
-            font-size: 5vw;
+            font-size: 4vw;
         }
     }
 }
@@ -291,7 +294,7 @@
         font-size: 6vw;
         margin-bottom: 2vw;
         @include desktop{
-            font-size: 4vw;
+            font-size: 2vw;
         }
     }
     &__underscore{
@@ -299,8 +302,8 @@
         height: 1vw;
         background-color: $tertiary-color;
         @include desktop{
-            width: 10vw;
-            height: 0.8vw;
+            width: 5vw;
+            height: 0.6vw;
         }
     }
 }
