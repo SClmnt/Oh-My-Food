@@ -7,7 +7,22 @@
         border-radius: 1.5vw;
     }
 }
-
+%radius_menu{
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+    }
+}
+%radius_price{
+    border-top-right-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        border-bottom-right-radius: 1.5vw;
+        border-top-right-radius: 1.5vw;
+    }
+}
 %cornertop{
     border-top-left-radius: 5vw;
     border-top-right-radius: 5vw;

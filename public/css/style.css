@@ -12,6 +12,17 @@
   }
 }
 
+.container--menu {
+  border-top-left-radius: 10vw;
+  border-top-right-radius: 10vw;
+}
+@media screen and (min-width: 1024px) {
+  .container--menu {
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+  }
+}
+
 .card .fig__img {
   border-top-left-radius: 5vw;
   border-top-right-radius: 5vw;
@@ -69,6 +80,44 @@
     transform: translateY(0vh);
   }
 }
+@keyframes loader {
+  0% {
+    transform: translateY(0vh);
+    height: 120vh;
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(0vh);
+    height: 120vh;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    height: 0vh;
+    opacity: 0;
+  }
+}
+@keyframes steam {
+  0% {
+    transform: translateY(22vw);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes panshake {
+  25% {
+    transform: translateX(0.5%);
+  }
+  75% {
+    transform: translateX(-0.5%);
+  }
+}
 html, body {
   scroll-behavior: smooth;
   height: 100vh;
@@ -81,6 +130,10 @@ html, body {
   font-size: 5vw;
 }
 
+main {
+  position: relative;
+  overflow: hidden;
+}
 @media screen and (min-width: 1024px) {
   main {
     display: flex;
@@ -95,17 +148,84 @@ a {
   color: black;
 }
 
+.heat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 5;
+  width: 19vw;
+  padding-left: 40%;
+}
+.heat__steam {
+  width: 1vw;
+  height: 2vw;
+  background-color: #9356DC;
+  border-radius: 1vw;
+  transform: translateY(22vw);
+  animation: steam 1000ms linear;
+  animation-iteration-count: infinite;
+}
+.heat__steam--1 {
+  animation-delay: 40ms;
+}
+.heat__steam--2 {
+  animation-delay: 170ms;
+}
+.heat__steam--3 {
+  animation-delay: 90ms;
+}
+.heat__steam--4 {
+  animation-delay: 730ms;
+}
+.heat__steam--5 {
+  animation-delay: 515ms;
+}
+
+.pan {
+  padding: 20% 40%;
+  position: relative;
+  z-index: 10;
+  animation: panshake 1000ms linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.pan__body {
+  width: 20vw;
+  height: 3vw;
+  background-color: black;
+  border-radius: 0.2vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+.pan__handle {
+  position: absolute;
+  width: 18vw;
+  height: 1vw;
+  background-color: black;
+  left: 59vw;
+  top: 17.8vw;
+  transform: rotate(-16deg);
+  border-radius: 0.5vw;
+}
+@media screen and (min-width: 1024px) {
+  .pan__handle {
+    left: 58.8vw;
+    top: 17.5vw;
+  }
+}
+
 .btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 99%;
   padding: 0vw 0vw;
   margin: 3.5vw auto;
   background-color: white;
   align-items: center;
   position: relative;
   opacity: 1;
+  overflow: hidden;
 }
 .btn__load {
   animation: btn 1000ms;
@@ -145,6 +265,11 @@ a {
   font-size: 4.1vw;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .btn__txt {
+    font-size: 3vw;
+  }
+}
 .btn__txt--bold {
   font-weight: bold;
 }
@@ -159,8 +284,6 @@ a {
   transition: left 400ms, border-radius 400ms;
   transition-timing-function: linear;
   z-index: 3;
-  border-top-right-radius: 5vw;
-  border-bottom-right-radius: 5vw;
   width: fit-content;
   height: 100%;
 }
@@ -192,14 +315,22 @@ a {
 .btn__check {
   color: white;
 }
+@media screen and (min-width: 1024px) {
+  .btn__check {
+    font-size: 3.5vw;
+  }
+}
 .btn__checkbox {
   position: absolute;
   left: 81%;
   overflow: hidden;
   background-color: #99E2D0;
   padding: 5vw 6vw;
-  border-top-right-radius: 5vw;
-  border-bottom-right-radius: 5vw;
+}
+@media screen and (min-width: 1024px) {
+  .btn__checkbox {
+    padding: 6vw 7vw;
+  }
 }
 .btn__span {
   display: flex;
@@ -292,6 +423,17 @@ a {
   top: 25%;
   font-size: 8vw;
 }
+@media screen and (min-width: 1024px) {
+  .menu__heart {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__heart {
+    top: 33%;
+    left: 5vw;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -308,6 +450,11 @@ a {
   z-index: 4;
   background-color: white;
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .header--back {
+    height: 7vw;
+  }
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -334,8 +481,13 @@ a {
   margin-left: -9.5vw;
 }
 @media screen and (min-width: 1024px) {
+  .header__logo--no_shadow {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
   .header__logo {
-    height: 4vw;
+    height: 3vw;
     transform: rotate(-5deg);
     max-width: 50%;
     box-shadow: none;
@@ -344,6 +496,11 @@ a {
 .header__arrow {
   margin-left: 5vw;
   z-index: 4;
+}
+@media screen and (min-width: 1024px) {
+  .header__arrow {
+    font-size: 3vw;
+  }
 }
 
 .footer {
@@ -405,6 +562,12 @@ a {
   margin-top: 0vh;
   padding-top: 70vw;
 }
+@media screen and (min-width: 1024px) {
+  .background {
+    background-size: cover;
+    padding-top: 25vw;
+  }
+}
 .background--palette {
   background-image: url(../../images/restaurants/la_palette_du_gout.jpg);
 }
@@ -416,6 +579,24 @@ a {
 }
 .background--fr {
   background-image: url(../../images/restaurants/a_la_francaise.jpg);
+}
+
+.loader {
+  position: relative;
+  width: 100vw;
+  height: 0vh;
+  overflow: hidden;
+  display: flex;
+  margin: -26vw auto;
+  flex-direction: column;
+  z-index: 4;
+  background-color: white;
+  padding-top: 26vw;
+  animation: loader 3000ms cubic-bezier(0.34, 0.32, 0.81, 0.99);
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  transform: translateY(0vh);
+  opacity: 1;
 }
 
 .container {
@@ -435,8 +616,12 @@ a {
 }
 .container--menu {
   margin-top: -15vw;
-  border-top-left-radius: 10vw;
-  border-top-right-radius: 10vw;
+}
+@media screen and (min-width: 1024px) {
+  .container--menu {
+    width: 90%;
+    background-color: #f6f6f6;
+  }
 }
 .container__form {
   padding: 0vw 0vw;
@@ -518,7 +703,7 @@ a {
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 1024px) {
-  .container--lightgray {
+  .container--transparent {
     background-color: transparent;
     z-index: 0;
   }
@@ -633,6 +818,11 @@ a {
 .menu__section {
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .menu__section {
+    width: 90%;
+  }
+}
 .menu__span {
   width: 100%;
   position: relative;
@@ -644,9 +834,19 @@ a {
   position: relative;
   width: 15%;
 }
+@media screen and (min-width: 1024px) {
+  .menu__span {
+    width: 90%;
+  }
+}
 .menu__name {
   font-family: "Shrikhand";
   font-size: 8vw;
+}
+@media screen and (min-width: 1024px) {
+  .menu__name {
+    font-size: 5vw;
+  }
 }
 
 .title_block__txt {
@@ -654,10 +854,21 @@ a {
   font-size: 6vw;
   margin-bottom: 2vw;
 }
+@media screen and (min-width: 1024px) {
+  .title_block__txt {
+    font-size: 4vw;
+  }
+}
 .title_block__underscore {
   width: 15vw;
   height: 1vw;
   background-color: #99E2D0;
+}
+@media screen and (min-width: 1024px) {
+  .title_block__underscore {
+    width: 10vw;
+    height: 0.8vw;
+  }
 }
 
 form {

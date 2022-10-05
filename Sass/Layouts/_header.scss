@@ -13,7 +13,10 @@
         position: fixed;
         z-index: 4;
         background-color: white;
-        width: 100%
+        width: 100%;
+        @include desktop{
+            height: 7vw;
+        }
     }
     @include desktop{
         padding: 0vw 0vw;
@@ -38,9 +41,12 @@
         &--no_shadow{
             box-shadow: none;
             margin-left: -9.5vw;
+            @include desktop{
+                margin: 0;
+            }
         }
         @include desktop {
-            height: 4vw;
+            height: 3vw;
             transform: rotate(-5deg);
             max-width: 50%;
             box-shadow: none;
@@ -50,6 +56,9 @@
     &__arrow{
         margin-left: 5vw;
         z-index: 4;
+        @include desktop{
+            font-size: 3vw;
+        }
     }
 }
 

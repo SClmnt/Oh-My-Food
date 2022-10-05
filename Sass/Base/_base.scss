@@ -13,6 +13,8 @@ html,body{
 }
 
 main{
+	position: relative;
+	overflow: hidden;
 	@include desktop{
 		display: flex;
 		flex-direction: row;

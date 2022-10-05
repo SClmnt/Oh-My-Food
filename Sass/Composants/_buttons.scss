@@ -1,9 +1,64 @@
+.heat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    z-index: 5;
+    width: 19vw;
+    padding-left: 40%;
+    &__steam{
+        width: 1vw;
+        height: 2vw;
+        background-color: $primary-color;
+        border-radius: 1vw;
+        transform:translateY(22vw);
+        animation: steam $steam-dur linear;
+        animation-iteration-count: infinite;
+      
+        @for $i from 1 through 5 {   
+            &--#{$i} {
+                animation-delay: $steam-delay * $i + random(50)*15ms;                 
+            }
+        }
+    }
+  }
+  .pan{
+    padding: 20% 40%;
+    position: relative;
+    z-index: 10;
+    animation: panshake 1000ms linear;
+    animation-iteration-count:infinite;
+    animation-fill-mode: both;
+    &__body{
+        width: 20vw;
+        height: 3vw;
+        background-color: black;
+        border-radius: 0.2vw;
+        border-bottom-left-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+    }
+    &__handle{
+        position: absolute;
+        width: 18vw;
+        height: 1vw;
+        background-color: black;
+        left: 59vw;
+        top: 17.8vw;
+        transform: rotate(-16deg);
+        border-radius: 0.5vw;
+        @include desktop{
+            left: 58.8vw;
+            top: 17.5vw;
+        }
+    }
+  }
+
+
 
 .btn{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
     @extend %radius;
     @extend %shadow;
     padding: 0vw 0vw;
@@ -11,7 +66,8 @@
     background-color: white;
     align-items: center;
     position: relative;
-    opacity: 1;   
+    opacity: 1; 
+    overflow: hidden;  
     &__load{
         animation: btn $anim-dur;
         animation-fill-mode: backwards;
@@ -46,6 +102,9 @@
         margin: 0vw;
         font-size: 4.1vw;
         width: 100%;
+        @include desktop{
+            font-size: 3vw;
+        }
         &--bold{
             font-weight: bold;
         }
@@ -60,8 +119,7 @@
             transition:  left 400ms ,border-radius 400ms;
             transition-timing-function: linear;
             z-index: 3;
-            border-top-right-radius: 5vw;
-            border-bottom-right-radius: 5vw;
+            
             width: fit-content;
             height: 100%;
             
@@ -99,6 +157,9 @@
         
         
         color: white;
+        @include desktop {
+            font-size: 3.5vw;
+        }
         
     }
     &__checkbox{
@@ -108,8 +169,10 @@
         overflow: hidden;
         background-color: $tertiary-color;
         padding: 5vw 6vw;
-        border-top-right-radius: 5vw;
-        border-bottom-right-radius: 5vw; 
+
+        @include desktop{
+            padding: 6vw 7vw;
+        }
         
     }
     &__span{
@@ -208,6 +271,13 @@
     left: 0vw;
     top: 25%;
     font-size: 8vw;
+    @include desktop{
+        font-size: 5vw;
+    }
+    @include tablette{
+        top:33%;
+        left: 5vw;
+    }
         &--full{
             @extend .caption__heart--full;
         }

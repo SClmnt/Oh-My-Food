@@ -18,4 +18,10 @@ $breakpoints: (tablette:768px ,desktop:1024px);
 
 $num-btn: 4;
 $anim-dur: 1000ms;
-$anim-delay: $anim-dur / $num-btn;
+$anim-delay: calc($anim-dur / $num-btn);
+
+$padding:10%;
+$steam-dur:1000ms;
+$steam-delay: calc($steam-dur / 100);
+
+$shake-intensity: 0.5%;
