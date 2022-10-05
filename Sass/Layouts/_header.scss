@@ -15,7 +15,7 @@
         background-color: white;
         width: 100%;
         @include desktop{
-            height: 7vw;
+            height: 6vw;
         }
     }
     @include desktop{
@@ -46,7 +46,7 @@
             }
         }
         @include desktop {
-            height: 3vw;
+            height: 2.5vw;
             transform: rotate(-5deg);
             max-width: 50%;
             box-shadow: none;
