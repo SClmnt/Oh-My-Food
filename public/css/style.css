@@ -109,7 +109,7 @@
 }
 @keyframes steam {
   0% {
-    transform: translateY(22vw);
+    transform: translateY(22.5vw);
     opacity: 1;
   }
   80% {
@@ -171,24 +171,24 @@ a {
   height: 2vw;
   background-color: #9356DC;
   border-radius: 1vw;
-  transform: translateY(22vw);
+  transform: translateY(22.5vw);
   animation: steam 1000ms linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 4;
 }
 .heat__steam--1 {
-  animation-delay: 70ms;
+  animation-delay: 205ms;
 }
 .heat__steam--2 {
-  animation-delay: 65ms;
+  animation-delay: 650ms;
 }
 .heat__steam--3 {
-  animation-delay: 615ms;
+  animation-delay: 150ms;
 }
 .heat__steam--4 {
-  animation-delay: 160ms;
+  animation-delay: 235ms;
 }
 .heat__steam--5 {
-  animation-delay: 215ms;
+  animation-delay: 200ms;
 }
 
 .pan {
@@ -639,6 +639,14 @@ a {
     width: 40%;
     font-size: 2vw;
     padding: 2vw 0vw;
+  }
+}
+.container--top {
+  padding-top: 29vw;
+}
+@media screen and (min-width: 1024px) {
+  .container--top {
+    padding-top: 2vw;
   }
 }
 .container--menu {

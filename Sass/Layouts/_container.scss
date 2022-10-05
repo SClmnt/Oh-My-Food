@@ -54,6 +54,12 @@
         padding: 2vw 0vw;
         
     }
+    &--top{
+        padding-top: 29vw;
+        @include desktop{
+            padding-top: 2vw;
+        }
+    }
     &--menu{
         margin-top: -15vw;
         @extend %radius_menu;

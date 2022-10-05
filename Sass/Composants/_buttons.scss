@@ -10,9 +10,9 @@
         height: 2vw;
         background-color: $primary-color;
         border-radius: 1vw;
-        transform:translateY(22vw);
+        transform:translateY(22.5vw);
         animation: steam $steam-dur linear;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 4;
       
         @for $i from 1 through 5 {   
             &--#{$i} {
