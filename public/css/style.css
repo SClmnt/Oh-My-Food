@@ -176,19 +176,19 @@ a {
   animation-iteration-count: infinite;
 }
 .heat__steam--1 {
-  animation-delay: 400ms;
+  animation-delay: 430ms;
 }
 .heat__steam--2 {
-  animation-delay: 335ms;
+  animation-delay: 110ms;
 }
 .heat__steam--3 {
-  animation-delay: 660ms;
+  animation-delay: 630ms;
 }
 .heat__steam--4 {
-  animation-delay: 220ms;
+  animation-delay: 580ms;
 }
 .heat__steam--5 {
-  animation-delay: 500ms;
+  animation-delay: 470ms;
 }
 
 .pan {
@@ -479,7 +479,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .header--back {
-    height: 7vw;
+    height: 6vw;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -513,7 +513,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .header__logo {
-    height: 3vw;
+    height: 2.5vw;
     transform: rotate(-5deg);
     max-width: 50%;
     box-shadow: none;
