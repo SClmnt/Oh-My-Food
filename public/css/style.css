@@ -166,19 +166,19 @@ a {
   animation-iteration-count: infinite;
 }
 .heat__steam--1 {
-  animation-delay: 40ms;
+  animation-delay: 745ms;
 }
 .heat__steam--2 {
-  animation-delay: 170ms;
+  animation-delay: 425ms;
 }
 .heat__steam--3 {
-  animation-delay: 90ms;
+  animation-delay: 405ms;
 }
 .heat__steam--4 {
-  animation-delay: 730ms;
+  animation-delay: 775ms;
 }
 .heat__steam--5 {
-  animation-delay: 515ms;
+  animation-delay: 200ms;
 }
 
 .pan {
@@ -338,6 +338,7 @@ a {
   justify-content: space-around;
 }
 .btn--line {
+  overflow: visible;
   background-color: #f6f6f6;
   align-items: center;
   justify-content: flex-start;
