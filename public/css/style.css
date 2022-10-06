@@ -176,19 +176,19 @@ a {
   animation-iteration-count: 4;
 }
 .heat__steam--1 {
-  animation-delay: 205ms;
+  animation-delay: 700ms;
 }
 .heat__steam--2 {
-  animation-delay: 650ms;
+  animation-delay: 335ms;
 }
 .heat__steam--3 {
-  animation-delay: 150ms;
+  animation-delay: 60ms;
 }
 .heat__steam--4 {
-  animation-delay: 235ms;
+  animation-delay: 475ms;
 }
 .heat__steam--5 {
-  animation-delay: 200ms;
+  animation-delay: 305ms;
 }
 
 .pan {
@@ -369,14 +369,19 @@ a {
   align-items: center;
   justify-content: flex-start;
   padding: 2vw 0vw;
+  transition: background-color 500ms, box-shadow 500ms 150ms;
 }
 @media screen and (min-width: 1024px) {
   .btn--line {
     padding: 0.5vw;
   }
 }
-.btn--purple {
+.btn--line:hover {
   background-color: #f2eafb;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn--line:hover > .btn__icon {
+  color: #9356DC;
 }
 .btn__nmb {
   display: flex;
@@ -401,9 +406,7 @@ a {
 .btn__icon {
   color: #353535;
   opacity: 0.7;
-}
-.btn__icon--purple {
-  color: #9356DC;
+  transition: color 500ms;
 }
 .btn_line__txt--bold {
   font-weight: bold;

@@ -194,14 +194,18 @@
         align-items: center;
         justify-content: flex-start;
         padding: 2vw 0vw;
+        transition: background-color 500ms, box-shadow 500ms 150ms;
         @include desktop{
             padding: 0.5vw;
         }
+        &:hover{
+            background-color: lighten($color: $primary-color, $amount: 35%);
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+            &> .btn__icon{
+                color: $primary-color;
+            }
+        }
     }
-    &--purple{
-               
-        background-color: lighten($color: $primary-color, $amount: 35%);
-    } 
     &__nmb{
         display: flex;
         color: white;
@@ -224,9 +228,7 @@
     &__icon{
         color: $dark-bckground;
         opacity: 0.7;
-        &--purple{
-            color: $primary-color;
-        }
+        transition: color 500ms;
     }
     &_line{
         &__txt--bold{
