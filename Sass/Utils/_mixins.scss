@@ -1,14 +1,9 @@
-@mixin heartp_pos {
-    top: 0%;
-    left: 0%;
-}
-
 @mixin radiant {
     color: $primary-color;
     color: linear-gradient(355deg, $primary-color 0%, $secondary-color 100%);
     
 }
-
+//Responsive//
 @mixin tablette {
     @media screen and (min-width: map-get($breakpoints, tablette)) {
         @content;
@@ -22,7 +17,7 @@
     }
     
 }
-
+//Animation des buttons des menus//
 @keyframes check{
     0%{transform: translateX(12vw) rotate(0deg) ;}
     100%{transform: translateX(0vw) rotate(360deg) ;}    
@@ -34,12 +29,12 @@
         100%{transform: translateX(0vw) rotate(360deg) ;}    
     }
 }
-
+//Animation menus//
 @keyframes btn{
     0%{opacity: 0; transform: translateY(2vh);}
     100%{opacity: 1; transform: translateY(0vh);}
 }
-
+//Animation page d'accueil//
 @keyframes loader{
     0%{ transform: translateY(0vh); height: 120vh; opacity: 1;}
     70%{ transform: translateY(0vh); height: 120vh;opacity: 1;}

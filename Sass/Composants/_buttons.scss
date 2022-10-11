@@ -52,7 +52,7 @@
     }
   }
 
-
+//Buttons des pages menu//
 
 .btn{
     display: flex;
@@ -160,17 +160,13 @@
         }
     
     }
-    &__check{
-        
-        
+    &__check{                
         color: white;
         @include desktop {
             font-size: 2vw;
-        }
-        
+        }        
     }
-    &__checkbox{
-        
+    &__checkbox{        
         position: absolute;
         left: 81%;
         overflow: hidden;
@@ -180,14 +176,14 @@
         @include desktop{
             padding: 2vw 1.6vw;
 
-        }
-        
+        }       
     }
     &__span{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
+    //Buttons de la page d'accueil//
     &--line{
         overflow: visible;
         background-color: $light-gray;
@@ -238,6 +234,7 @@
     
 }
 
+//Button heart page d'accueil//
 .caption__heart{
     position: relative;
     padding: 3vw;
@@ -275,6 +272,7 @@
     
 }
 
+//Button heart des menus//
 .menu__heart{
     @extend .caption__heart;
     background-color: $light-gray;

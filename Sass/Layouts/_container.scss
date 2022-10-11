@@ -1,3 +1,4 @@
+//Background des menus//
 .background{
     background-position: top;
     background-size: contain;
@@ -22,7 +23,7 @@
         background-image: url(../../images/restaurants/a_la_francaise.jpg);
     }
 }
-
+//Animation de la page d'accueil//
 .loader{
     position: relative;
     width: 100vw;
@@ -41,6 +42,7 @@
     opacity: 1;
   }
 
+//Sections des pages//
 .container{
     display: flex;
     flex-direction: column;
@@ -163,7 +165,7 @@
         }
     }
 }
-
+//Liens vers les pages des menu//
 .card{
     width: 100%;
     margin: 3vw auto;
@@ -182,7 +184,7 @@
         height: 80%;
 
     }
-
+    //Illustration des cartes//
     .fig{
         display: flex;
         width: 100%;
@@ -271,7 +273,7 @@
         }
     }
 }
-
+//Sections des menus//
 .menu{
     &__section{
         width: 100%;
@@ -301,7 +303,7 @@
         }
     }
 }
-
+//Titres des sections du menu//
 .title_block{
     &__txt{
         font-weight: 300;

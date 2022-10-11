@@ -176,19 +176,19 @@ a {
   animation-iteration-count: 4;
 }
 .heat__steam--1 {
-  animation-delay: 700ms;
+  animation-delay: 85ms;
 }
 .heat__steam--2 {
   animation-delay: 335ms;
 }
 .heat__steam--3 {
-  animation-delay: 60ms;
+  animation-delay: 690ms;
 }
 .heat__steam--4 {
-  animation-delay: 475ms;
+  animation-delay: 640ms;
 }
 .heat__steam--5 {
-  animation-delay: 305ms;
+  animation-delay: 380ms;
 }
 
 .pan {

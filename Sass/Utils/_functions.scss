@@ -1,6 +1,8 @@
+//Ombres//
 %shadow{
     box-shadow:$shadow; 
 }
+//Borders-radius//
 %radius{
     border-radius: 5vw;
     @media screen and (min-width: map-get($breakpoints, desktop)) {
@@ -40,7 +42,7 @@
         border-bottom-right-radius: 1.5vw;
     }
 }
-
+//position du button heart//
 %heartpos{
     top: -3vw;
     left: -2vw;
