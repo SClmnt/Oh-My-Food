@@ -176,19 +176,19 @@ a {
   animation-iteration-count: 4;
 }
 .heat__steam--1 {
-  animation-delay: 85ms;
+  animation-delay: 175ms;
 }
 .heat__steam--2 {
-  animation-delay: 335ms;
+  animation-delay: 440ms;
 }
 .heat__steam--3 {
-  animation-delay: 690ms;
+  animation-delay: 255ms;
 }
 .heat__steam--4 {
-  animation-delay: 640ms;
+  animation-delay: 550ms;
 }
 .heat__steam--5 {
-  animation-delay: 380ms;
+  animation-delay: 425ms;
 }
 
 .pan {
@@ -696,6 +696,9 @@ a {
   width: 89%;
   margin: 0vw 0vw;
   padding: 0vh 0vw;
+}
+.container__block--wide {
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .container__block--row {

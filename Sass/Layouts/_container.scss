@@ -101,6 +101,9 @@
         width: 89%;
         margin: 0vw 0vw;
         padding: 0vh 0vw;
+        &--wide{
+            width: 100%;
+        }
         &--row{  
             @include tablette{
                 flex-direction: row;
